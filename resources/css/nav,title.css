@@ -1,0 +1,17 @@
+nav{
+    background-color: rgb(255, 255, 255)!important;
+    position: initial!important;
+    width: 100vw;
+}
+
+.logo-text{
+    color: red;
+}
+
+#header-path{
+    background-color: #2B2B2B;
+}
+
+.page-descrip{
+    font-size: 200%;
+}

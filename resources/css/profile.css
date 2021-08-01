@@ -1,0 +1,148 @@
+
+/* ================================== */
+/*           PROFILE PAGE */
+/* ================================== */
+
+#profile-detail table{
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+#profile-detail tr{
+    width: 100%;
+    border-bottom: 1px solid rgba(231, 230, 230, 0.712);
+}
+
+#profile-detail th{
+    background-color: #212529;
+    color: white;
+    width: 25%;
+    padding: 1rem 2rem;
+}
+
+#profile-detail td{
+    padding: 1rem 2rem;
+    color: black;
+}
+
+.table-first-row{
+    background-color: #007BFF!important;
+}
+
+tr:nth-child(odd) td{
+    background-color: rgb(221, 218, 218);
+}
+
+.profile-chng-pass-btn{
+    border:5px double #212529;
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    display: inline-block;
+}
+
+.profile-chng-pass-btn:hover{
+    border-color: #007BFF;
+    color: #212529;
+}
+
+.profile-pic{
+    width:20rem;
+    height: 25rem;
+    border-radius: 2%;
+}
+
+.up-profile-text{
+    font-weight: bold;
+    margin-top: 2rem;
+    color: #007BFF;
+    display: block;
+}
+
+
+/* ================================== */
+/*           UPDATE PROFILE PAGE */
+/* ================================== */
+#update-form  input:read-only{
+    background-color: transparent;
+}
+
+#update-form  input{
+    background-color: white;
+    border-color: black;
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    color: rgb(0, 0, 0);
+    width: 80%;
+}
+
+#update-form  input:focus{
+    color: red;
+}
+
+#update-form .update-edit{
+    border: 1px solid rgb(197, 197, 197);
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+#update-form .update-edit:active{
+    background-color: #fff;
+}
+
+.update-btn{
+    background-color: #007BFF!important;
+    color: white!important;
+    display: block !important;
+    margin: 3rem auto!important;
+    padding: 1rem 10rem !important;
+    width: fit-content!important;
+}
+
+.update-btn:hover{
+    background-color: #0a64c5 !important;
+}
+
+#update-change-pic-in{
+    display: none;
+}
+
+#update-form ::placeholder{
+    color: rgba(100, 100, 100, 0.842);
+}
+
+
+
+
+@media(max-width: 425px){
+    #profile-detail th{
+        padding: 1rem 1.2rem;
+        font-size: 100%;
+    }
+    
+    #profile-detail td{
+        max-width: 100%;
+        font-size: 100%;
+    }
+    
+        
+    .update-user-detail .input-group input{
+        width: 70%!important;
+    }
+}
+
+@media(max-width: 375px){
+    #profile-detail th{
+        width: 25%;
+        font-size: 90%;
+    }
+    
+    #profile-detail td{
+        font-size: 80%;
+    }
+
+}
