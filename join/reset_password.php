@@ -24,7 +24,11 @@
         include "../database/dbconnection.php";
 
         if(!$_SESSION['sendMail'] == 1){
-            header("location: recover.php");
+            ?>
+                <script>
+                    location.replace("recover.php");
+                </script>
+            <?php
         }
 
 
@@ -57,9 +61,13 @@
         
                         $sql_update = "UPDATE donor_info SET password='$password', confirmpass ='$confirmpass' WHERE token='$myToken'";
                         if(mysqli_query($con, $sql_update)){
-                            header("location: login.php");                            
+                            ?>
+                                <script>
+                                    location.replace("login.php");
+                                </script>
+                            <?php
+                 
                             session_destroy();
-
                             session_start();
                             $_SESSION['passwordUpdate'] = "<div class='alert alert-success rounded p-1 '><strong>Password changed sucessfull.</strong></div>";
                         }else{

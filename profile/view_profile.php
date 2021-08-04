@@ -124,7 +124,11 @@
         <?php
 
             }else{
-                header("location: ../index.php");
+                ?>
+                    <script>
+                        location.replace("../index.php");
+                    </script>
+                <?php                     
             };
          
         ?>

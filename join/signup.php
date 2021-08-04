@@ -84,8 +84,12 @@
                                 echo "<div class='alert alert-danger'>Creating Account Fail. Try again</div>". mysqli_error($con);
                             }else{
                                 $_SESSION['successSignup']="<div class='alert alert-success font-weight-bold'> Sucessfully created account!</div>";
-                                echo $_SESSION['successSignup'];
-                                header("location: login.php");
+                                echo $_SESSION['successSignup'];                       
+                                ?>
+                                    <script>
+                                        location.replace("login.php");
+                                    </script>
+                                <?php
                             }
                         }
                     }

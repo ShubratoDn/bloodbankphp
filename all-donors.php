@@ -22,15 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
     
-    <!--animated headline css -->
-    <link rel="stylesheet" href="vendor/css/animateHeader.css">
 
-    <!-- data-aos -->
-    <link rel="stylesheet" href="vendor/css/aos.css">
-
-    <!-- owl carousel -->
-    <link rel="stylesheet" href="vendor/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/css/owl.theme.default.css">
 
     <!-- custom style -->
     <link rel="stylesheet" href="resources/css/style.css">

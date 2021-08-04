@@ -1,6 +1,3 @@
-
-
-
 <!-- Some donors Section starts -->
 <section id="donor" class=" d-flex justify-content-center align-items-center">
     <div class="container-md container-fluid">

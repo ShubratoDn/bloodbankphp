@@ -1,17 +1,23 @@
-
 <?php
     session_start();
     $userid = $_GET['id'];
-    if(!$_SESSION['userid']){
-        header("location: ../index.php");
+    if(!$_SESSION['userid']){    
+        ?>
+            <script>
+                location.replace("../index.php");
+            </script>
+        <?php        
     }
 
     if($_SESSION['userid'] != $userid){
-        header("location: ../index.php");
+        ?>
+            <script>
+                location.replace("../index.php");
+            </script>
+        <?php             
     }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,11 +79,9 @@
                         $sql_find = "SELECT * FROM `donor_info` WHERE id='$userid' ";
                         $result = mysqli_query($con, $sql_find);
 
-                        if($row = mysqli_fetch_assoc($result)){
-                            
-                    
+                        if($row = mysqli_fetch_assoc($result)){                         
+            
                     ?>
-
 
                     <div class="col-lg-3 d-flex justify-content-center align-items-center">
                         <div class="profile-left py-5">
@@ -145,7 +149,11 @@
 
                         }else{
                             //ending if
-                            header("location: ../index.php");
+                            ?>
+                                <script>
+                                    location.replace("../index.php");
+                                </script>
+                            <?php                               
                         }
                     ?>
 

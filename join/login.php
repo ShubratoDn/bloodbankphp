@@ -1,6 +1,4 @@
-
 <?php
-
    session_start();
    error_reporting(0);
    include "../database/dbconnection.php" ;
@@ -13,9 +11,7 @@
        $successSignup = $_SESSION['successSignup'];
    }
 
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +85,11 @@
                                 setcookie("email_num", "$email_num", time()+ 7*24*60*60);
                                 setcookie("password","$getPassword", time() + 7*24*60*60);
 
-                                header("Location: ../index.php");                                
+                                ?>
+                                    <script>
+                                        location.replace("../index.php");
+                                    </script>
+                                <?php                          
                             }else{                                    
                                 ?>
                                     <script>

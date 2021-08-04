@@ -25,7 +25,7 @@
                     <div class="post-time px-3 py-2">
                         <h4>Posted 
                             <?php
-                                                
+                                            
                                 // Return current date 
                                 date_default_timezone_set("Asia/Dhaka");
                                 $current_date = date_create(date('Y-m-d H:i:s'));                               
@@ -36,25 +36,16 @@
 
                                 $difference = $current_timestamp - $db_timestamp;
 
-                                $min = floor($difference / 60);
-                                $hour = floor($min / 60);
-                                $day = 0;
+                                $min = round($difference / 60);    
+                                $hour = round($min/60);
 
-                                if($hour > 23){
-                                    $day++;
-                                    $hour = $hour - 24; 
-                                    $postTime = "$day day $hour hour ";
-                                }
-
-                                if($day == 0 && $hour == 0 ){
+                                if($hour > 0){
+                                    $postTime = "$hour hour";
+                                }else{
                                     $postTime = "$min min";
                                 }
-
-                                if($day == 0 && $hour > 0 ){
-                                    $postTime = "$hour hour";
-                                }
-
-                                echo $postTime;
+                                
+                                echo "$postTime";
                                
                             ?> 
                             ago

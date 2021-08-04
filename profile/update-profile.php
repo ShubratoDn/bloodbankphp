@@ -6,11 +6,19 @@
 
     $userid = $_GET['id'];
     if(!$_SESSION['userid']){
-        header("location: ../index.php");
+        ?>
+            <script>
+                location.replace("../index.php");
+            </script>
+        <?php             
     }
 
     if($_SESSION['userid'] != $userid){
-        header("location: ../index.php");
+        ?>
+            <script>
+                location.replace("../index.php");
+            </script>
+        <?php             
     }
 
     include("../database/dbconnection.php");
